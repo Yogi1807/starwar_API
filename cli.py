@@ -107,17 +107,19 @@ if __name__ == "__main__":
     print(new())
 
     # first task
-    # first_result = first_task()
-    # pprint(first_result)
-    #
-    # # second task : capture characters
-    # second_result = second_task(first_result)
-    # pprint(second_result)
-    #
-    # # third task : capture planets
-    # third_result = third_task(first_result)
-    # pprint(third_result)
-    #
-    # # fourth task: capture vehicles
-    # fourth_result = fourth_task(first_result)
-    # pprint(fourth_result)
+    first_result = first_task()
+    pprint(first_result)
+
+    # second task : capture characters
+    second_result = second_task(first_result)
+    pprint(second_result)
+
+    # third task : capture planets
+    third_result = third_task(first_result)
+    pprint(third_result)
+
+    # fourth task: capture vehicles
+    fourth_result = fourth_task(first_result)
+    pprint(fourth_result)
+
+    print("hello")
