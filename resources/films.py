@@ -1,6 +1,8 @@
+from random import choice
 from typing import Dict, List
 from resources.base import ResourceBase
 from utils.fetch_data import hit_url
+from utils.randgen import ProduceUrls
 
 
 class Film(ResourceBase):
@@ -43,3 +45,5 @@ class Film(ResourceBase):
         data = response.json()
         return data
 
+    def pull_random_data(self):
+        return ProduceUrls(self.get_resource_urls()).function()

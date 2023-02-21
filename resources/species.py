@@ -1,7 +1,9 @@
+import random
+import requests
 from typing import Dict, List
 from resources.base import ResourceBase
 from utils.fetch_data import hit_url
-from utils.randgen import ProduceChars
+from utils.randgen import ProduceUrls
 
 
 class Species(ResourceBase):
@@ -50,4 +52,4 @@ class Species(ResourceBase):
         return data
 
     def pull_random_data(self):
-        pass
+        return ProduceUrls(self.get_resource_urls()).function()

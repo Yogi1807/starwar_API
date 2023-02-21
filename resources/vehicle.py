@@ -1,6 +1,7 @@
 from typing import Dict, List
 from resources.base import ResourceBase
 from utils.fetch_data import hit_url
+from utils.randgen import ProduceUrls
 
 
 class Vehicle(ResourceBase):
@@ -42,3 +43,6 @@ class Vehicle(ResourceBase):
         response = hit_url(absolute_url)
         data = response.json()
         return data
+
+    def pull_random_data(self):
+        return ProduceUrls(self.get_resource_urls()).function()
