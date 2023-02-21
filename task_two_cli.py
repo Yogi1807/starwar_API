@@ -16,7 +16,7 @@ import requests
 
 from pprint import pprint
 from typing import Dict, List
-from utils.randgen import ProduceChars
+
 from utils.fetch_data import hit_url, fetch_data
 
 
@@ -39,27 +39,23 @@ def first_task() -> Dict:
     return result_
 
 
-
-def main():
+def main() -> tuple:
     parser = argparse.ArgumentParser(description= "fetching data from swapi.api")
 
-    parser.add_argument("-c")
-    parser.add_argument("-p")
-    parser.add_argument("-v")
+    parser.add_argument("-c", default=
+                        'characters')
+    parser.add_argument("-p", default= "planets")
+    parser.add_argument("-v", default= "vehicles")
     argument = parser.parse_args()
     print(f"Parsed arguments are {argument}")
-    obj = (str(argument.c), str(argument.p), str(argument.v))
+    obj = (argument.c, argument.p, argument.v)
     return obj
 
 
 def second_task(data_: Dict) -> List:
     """pull data from swapi characters sequentially"""
     for i in main():
-
-
         characters = data_.get(i)  # returns None by default
-
-
         names = []
         for character in characters:
             character_data = hit_url(character)
@@ -70,6 +66,4 @@ def second_task(data_: Dict) -> List:
 
 
 if __name__ == "__main__":
-
-
     second_task(first_task())

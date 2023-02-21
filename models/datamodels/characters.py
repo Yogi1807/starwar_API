@@ -1,10 +1,11 @@
 """pydantic model for characters data coming from swapi.dev/api/people"""
 
-from pydantic import BaseModel
+
 from typing import List, Optional
+from models.basemodel import Base
 
 
-class Character_(BaseModel):
+class Character_(Base):
     name: str
     height: str
     mass: str
