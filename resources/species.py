@@ -8,7 +8,7 @@ from utils.randgen import ProduceUrls
 
 class Species(ResourceBase):
     """
-    Film class related functionality
+    Species class related functionality
     """
 
     def __init__(self) -> None:

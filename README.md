@@ -19,6 +19,7 @@ starwarsAPI (project root directory)
       - __init__.py
       - datamodels
           - __init__.py
+          - base.py
           - films.py
           - planets.py 
           - species.py

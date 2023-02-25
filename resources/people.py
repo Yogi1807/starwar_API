@@ -6,7 +6,7 @@ from utils.randgen import ProduceUrls
 
 class People(ResourceBase):
     """
-    Film class related functionality
+    People class related functionality
     """
 
     def __init__(self) -> None:

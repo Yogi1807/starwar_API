@@ -1,4 +1,3 @@
-from random import choice
 from typing import Dict, List
 from resources.base import ResourceBase
 from utils.fetch_data import hit_url

@@ -42,8 +42,7 @@ def first_task() -> Dict:
 def main() -> tuple:
     parser = argparse.ArgumentParser(description= "fetching data from swapi.api")
 
-    parser.add_argument("-c", default=
-                        'characters')
+    parser.add_argument("-c", default= 'characters')
     parser.add_argument("-p", default= "planets")
     parser.add_argument("-v", default= "vehicles")
     argument = parser.parse_args()

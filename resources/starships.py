@@ -6,7 +6,7 @@ from utils.randgen import ProduceUrls
 
 class Starship(ResourceBase):
     """
-    Film class related functionality
+    Starship class related functionality
     """
 
     def __init__(self) -> None:

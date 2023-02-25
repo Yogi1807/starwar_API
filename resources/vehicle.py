@@ -6,7 +6,7 @@ from utils.randgen import ProduceUrls
 
 class Vehicle(ResourceBase):
     """
-    Film class related functionality
+    Vehicle class related functionality
     """
 
     def __init__(self) -> None:
