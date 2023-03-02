@@ -281,10 +281,10 @@ def store_species():
 
 
 if __name__ == "__main__":
-    # film = film1()
-    # character_data = store_characters()
+    film = film1()
+    character_data = store_characters()
     planets_data = store_planets()
-    # vehicles_data = store_vehicles()
-    # species_data = store_species()
-    # starships_data = store_starships()
+    vehicles_data = store_vehicles()
+    species_data = store_species()
+    starships_data = store_starships()
 

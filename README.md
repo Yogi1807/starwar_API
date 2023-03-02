@@ -7,9 +7,17 @@ starwarsAPI (project root directory)
   - task_one.py 
   - task_two.py
   - task_two_cli.py
+  - task_three.py
+  - task_three_cli.py
+  - task_four
   - requirements.txt
   - README.md 
   - venv  
+  - dal
+  - settings
+    - __init__
+  - db_conn_helper.py
+  - dml.py
   - utils
       - __init__.py
       - fetch_data.py
