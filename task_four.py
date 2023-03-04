@@ -26,7 +26,7 @@ from utils.timing import timeit
 
 
 def film1():
-    data = Film().get_sample_data(id_=1)
+    data = Film().get_sample_data(id_= 1)
     film_data = Film_(**data)
 
     # create DB connection
@@ -141,7 +141,7 @@ def store_planets():
 @timeit
 def store_starships():
     starships = film1().starships
-    starships_data = []
+    starship_data = []
 
     star_columns = [
         "name",
@@ -185,14 +185,14 @@ def store_starships():
             star_columns,
             star_values
         )
-        starships_data.append(star)
-    return starships_data
+        starship_data.append(star)
+    return starship_data
 
 
 @timeit
 def store_vehicles():
     vehicles = film1().vehicles
-    vehicles_data = []
+    vehicle_data = []
 
     veh_columns = [
         "cargo_capacity",
@@ -232,8 +232,8 @@ def store_vehicles():
             veh_columns,
             veh_values
         )
-        vehicles_data.append(veh)
-    return vehicles_data
+        vehicle_data.append(veh)
+    return vehicle_data
 
 
 
@@ -287,4 +287,4 @@ if __name__ == "__main__":
     vehicles_data = store_vehicles()
     species_data = store_species()
     starships_data = store_starships()
-
+    print("*")
