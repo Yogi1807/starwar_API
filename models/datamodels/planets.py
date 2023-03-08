@@ -25,7 +25,6 @@ class Planet_(Base):
     # films = Optional[List[str]]
 
 
-
 if __name__ == "__main__":
 
     data = {
