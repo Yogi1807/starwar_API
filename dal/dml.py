@@ -36,7 +36,6 @@ def insert_resource(
             value_fields = value_fields + str(value) + ""","""
 
     value_fields = value_fields.rstrip(""", """)
-
     result = None
     with get_db_conn() as conn:
         cursor = conn.cursor()
