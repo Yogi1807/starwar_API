@@ -46,7 +46,6 @@ def _load_from_file(filename):
         _settings[k] = v
 
 
-
 def _abs_path(filename):
     """Returns the absolute path to the provided ``filename``.
    Args:
@@ -57,7 +56,6 @@ def _abs_path(filename):
    """
 
     return os.path.join(os.path.dirname(__file__), filename)
-
 
 
 def _load():
@@ -72,6 +70,7 @@ def _load():
 
     env_filename = _abs_path("settings/secrets.yaml")
     _load_from_file(env_filename)
+
 
 def get_db_conn() -> Connection:
     """Assembles connection object to the SQL database.
@@ -115,4 +114,3 @@ if __name__ == "__main__":
     yaml_conn = get_db_conn()
     toml_conn = get_db_conn_toml()
     breakpoint()
-
