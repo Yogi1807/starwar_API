@@ -23,10 +23,10 @@ def insert_resource(
     """
 
     column_names = ", ".join(columns_)
-    value_fields = ", ".join(values)
+    # value_fields = ", ".join(values)
 
     column_names.rstrip(", ")
-    value_fields.rstrip(", ")
+    # value_fields.rstrip(", ")
 
     value_fields = ""
     for value in values:
@@ -54,4 +54,4 @@ def insert_resource(
 
 if __name__ == "__main__":
     insert_resource("characters", "char_id", 1,
-                    ["name", "height"], ["prashant", "176"])
+                    ["name", "height"], ["prashant", 176])
