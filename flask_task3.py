@@ -5,14 +5,8 @@ from resources.species import Species
 from resources.planets import Planet
 from resources.starships import Starship
 
-# pydentic classes
-from models.datamodels.films import Film_
-from models.datamodels.species_ import Species_
-from models.datamodels.planets import Planet_
-from models.datamodels.starships_ import StarShips_
-from models.datamodels.vehicles import Vehicle_
-from models.datamodels.characters import Character_
-from flask import Flask
+from flask import Flask, Response
+import json
 
 app = Flask(__name__)
 
@@ -58,4 +52,6 @@ def info(resource):
         }
     }
 
-    return data[resource]
+    data_ = data[resource]
+    data_ = json.dumps(data_, indent=4)
+    return Response(data_, mimetype='application/json')
